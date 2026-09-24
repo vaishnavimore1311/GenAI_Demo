@@ -1,12 +1,15 @@
-from langchain_groq import ChatGroq
-from dotenv import load_dotenv
+from langchain_groq import ChatGroq     
+from dotenv import load_dotenv      
 
 load_dotenv()
 
-llm=ChatGroq(
+llm=ChatGroq(                       
     model="openai/gpt-oss-20b"
 )
 
-prompt = input("Enter your prompt: ")
-response = llm.invoke(prompt)
-print(response.content)
+while True:
+    prompt = input("Enter your prompt: ")
+    if prompt == "exit":
+        break
+    response = llm.invoke(prompt)
+    print(response.content)
