@@ -2,6 +2,8 @@ from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, AIMessage
 from dotenv import load_dotenv      
 
+# human, AI, system msg
+# 
 load_dotenv()
 
 """Chatbot with proper history"""
